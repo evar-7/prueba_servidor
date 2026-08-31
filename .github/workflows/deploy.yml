@@ -21,5 +21,4 @@ jobs:
             echo "¡Conexión exitosa desde GitHub Actions!"
             mkdir -p ~/mi-proyecto-prueba
             cd ~/mi-proyecto-prueba
-            # Aquí en el futuro puedes hacer git pull o reiniciar contenedores
             pwd
