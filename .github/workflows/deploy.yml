@@ -11,14 +11,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Executing remote ssh commands using password
+      - name: Executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            echo "¡Conexión exitosa desde GitHub Actions!"
+            echo "¡Conexión exitosa con llave SSH!"
             mkdir -p ~/mi-proyecto-prueba
             cd ~/mi-proyecto-prueba
             pwd
